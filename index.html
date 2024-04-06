@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-hw-3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/task-1.js" type="module"></script>
+    <script src="./js/task-2.js" type="module"></script>
+    <script src="./js/task-3.js" type="module"></script>
+</head>
+
+<body>
+    <section>
+        <h2>Popular technologies</h2>
+        <ul class="list"></ul>
+    </section>
+    <script>
+        const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+        const list = document.querySelector(".list");
+
+        const markup = technologies
+            .map((technology) => `<li class="list-item">${technology}</li>`)
+            .join("");
+
+        // Check the console, you'll see a single string with HTML tags
+        console.log(markup);
+
+        // Adding all the markup in one operation
+        list.innerHTML = markup;
+    </script>
+</body>
+
+</html>
