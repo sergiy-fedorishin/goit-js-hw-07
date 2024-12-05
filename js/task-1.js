@@ -1,3 +1,10 @@
-const categoriesList = document.querySelector('#categories');
-const categoriesCount = categoriesList.querySelectorAll('li.item').length;
-console.log('number of categories:', categoriesCount);
+function isNumberInRange(start, end, number) {
+  const isInRange = number > start && number < end;
+
+  return isInRange;
+}
+
+console.log(isNumberInRange(10, 30, 17));
+console.log(isNumberInRange(10, 30, 5));
+console.log(isNumberInRange(20, 50, 24));
+console.log(isNumberInRange(20, 50, 76));
