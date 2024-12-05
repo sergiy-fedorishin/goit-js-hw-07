@@ -1,10 +1,9 @@
-function isNumberInRange(start, end, number) {
-  const isInRange = number > start && number < end;
+const categoriesList = document.getElementById('categories');
+const categoryItems = categoriesList.querySelectorAll('.item');
+console.log('Number of categories:', categoryItems.length);
 
-  return isInRange;
-}
-
-console.log(isNumberInRange(10, 30, 17));
-console.log(isNumberInRange(10, 30, 5));
-console.log(isNumberInRange(20, 50, 24));
-console.log(isNumberInRange(20, 50, 76));
+categoryItems.forEach(item => {
+  const categoryTitle = item.querySelector('h2').textContent;
+  const categoryItems = item.querySelectorAll('li');
+  console.log(`Category: ${categoryTitle}, Elements: ${categoryItems.length}`);
+});
